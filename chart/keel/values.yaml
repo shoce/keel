@@ -15,6 +15,20 @@ insecureRegistry: false
 polling:
   enabled: true
 
+# Host aliases to put into /etc/hosts
+# Example how to set values with --set command line option:
+# --set 'hostAliases[0].ip=127.0.0.1,hostAliases[0].hostnames={foo.local,bar.local}'
+# --set 'hostAliases[1].ip=10.1.2.3,hostAliases[1].hostnames={foo.remote,bar.remote}'
+# hostAliases:
+# - ip: "127.0.0.1"
+#   hostnames:
+#   - "foo.local"
+#   - "bar.local"
+# - ip: "10.1.2.3"
+#   hostnames:
+#   - "foo.remote"
+#   - "bar.remote"
+
 # Extra Containers to run alongside Keel
 # extraContainers:
 #   - name: busybox
@@ -240,14 +254,3 @@ persistence:
   enabled: false
   storageClass: "-"
   size: 1Gi
-
-# Host aliases to put into /etc/hosts
-# hostAliases:
-# - ip: "127.0.0.1"
-#   hostnames:
-#   - "foo.local"
-#   - "bar.local"
-# - ip: "10.1.2.3"
-#   hostnames:
-#   - "foo.remote"
-#   - "bar.remote"
